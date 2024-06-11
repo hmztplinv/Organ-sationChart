@@ -1,0 +1,12 @@
+﻿@model IEnumerable<OrgChartProject.Models.Department>
+
+<h2>Departments</h2>
+
+<ul>
+    @foreach (var department in Model)
+    {
+        <li>
+            <a href="/Department/Employees/@department.Id">@department.Name</a>
+        </li>
+    }
+</ul>

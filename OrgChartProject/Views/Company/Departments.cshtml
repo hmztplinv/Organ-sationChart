@@ -1,0 +1,13 @@
+﻿@model IEnumerable<OrgChartProject.Models.Department>
+
+<h2>Departments</h2>
+
+<form method="get" asp-controller="Company" asp-action="Employees">
+    <select name="id" asp-items="@(new SelectList(Model, "Id", "Name"))">
+        <option value="">Select a department</option>
+    </select>
+    <input type="hidden" name="companyId" value="@ViewBag.CompanyId" />
+    <button type="submit">Submit</button>
+</form>
+
+
